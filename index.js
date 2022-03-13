@@ -19,7 +19,13 @@ console.log(fasterShip.color); //silver
 // Mutating Objects
 fasterShip['Fuel Type'] = 'Avocado oil';
 fasterShip.color = 'gray';
-console.log(fasterShip); //{Fuel Type: "Avocado oil", color: "gray"}
+fasterShip.numEngines = 7; // adding extra properties
+fasterShip.year = 2011;
+fasterShip.brand = 'Indigo';
+console.log(fasterShip); // {Fuel Type: "Avocado oil", color: "gray", numEngines: 7}
+
+//Removing properties from an object
+// delete
 
 // 1. Invoking methods of objects
 let retreatMessage =
