@@ -22,10 +22,12 @@ fasterShip.color = 'gray';
 fasterShip.numEngines = 7; // adding extra properties
 fasterShip.year = 2011;
 fasterShip.brand = 'Indigo';
-console.log(fasterShip); // {Fuel Type: "Avocado oil", color: "gray", numEngines: 7}
+console.log(fasterShip); // {Fuel Type: "Avocado oil", color: "gray", numEngines: 7, year: 2011, brand: "Indogo"}
 
 //Removing properties from an object
-// delete
+delete fasterShip.brand;
+delete fasterShip.year;
+console.log(fasterShip); // {Fuel Type: "Avocado oil", color: "gray", numEngines: 7}
 
 // 1. Invoking methods of objects
 let retreatMessage =
