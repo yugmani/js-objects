@@ -5,8 +5,23 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
+// 1. Invoking methods of objects
+let retreatMessage = "We no longer wish to conquer your planet. It is full of dogs, which we do not care for.";
 
+const alienShip = {
+  retreat:function(){ // writing a method before ES6
+    console.log(retreatMessage);
+  },
 
+  takeOff(){  // writing a method after ES6
+    console.log('Spin... Borp... Glix... Blastoff!');
+  }
+}
+
+alienShip.retreat();  //invokes the method;
+alienShip['takeOff()']; // doesn't invoke the method
+
+// 2. Nested Objects
 let spaceship = {
   crew: {
     captain: {
