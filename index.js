@@ -5,20 +5,39 @@ import './style.css';
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
+// 1. Object Literal
+const fasterShip = {
+  'Fuel Type': 'Turbo Fuel', // 'Fuel Type' has quotation marks because it contains a space character.
+  color: 'silver',
+};
+
+//Accessing key value pairs of an object
+const fuel = fasterShip['Fuel Type'];
+console.log(fuel); // Turbo Fuel
+console.log(fasterShip.color); //silver
+
+// Mutating Objects
+fasterShip['Fuel Type'] = 'Avocado oil';
+fasterShip.color = 'gray';
+console.log(fasterShip); //{Fuel Type: "Avocado oil", color: "gray"}
+
 // 1. Invoking methods of objects
-let retreatMessage = "We no longer wish to conquer your planet. It is full of dogs, which we do not care for.";
+let retreatMessage =
+  'We no longer wish to conquer your planet. It is full of dogs, which we do not care for.';
 
 const alienShip = {
-  retreat:function(){ // writing a method before ES6
+  retreat: function () {
+    // writing a method before ES6
     console.log(retreatMessage);
   },
 
-  takeOff(){  // writing a method after ES6
+  takeOff() {
+    // writing a method after ES6
     console.log('Spin... Borp... Glix... Blastoff!');
-  }
-}
+  },
+};
 
-alienShip.retreat();  //invokes the method;
+alienShip.retreat(); //invokes the method;
 alienShip['takeOff()']; // doesn't invoke the method
 
 // 2. Nested Objects
@@ -85,7 +104,4 @@ for (let crewGuy in spaceship.crew) {
   );
 }
 
-console.log(crewsDegrees);  // [ {Lily : 'Computer Engineering'}, { Dan : 'Aerospace Engineering' }, { Clementine : 'Physics' }, { Shauna : 'Conservation Science' } ]
-
-
-
+console.log(crewsDegrees); // [ {Lily : 'Computer Engineering'}, { Dan : 'Aerospace Engineering' }, { Clementine : 'Physics' }, { Shauna : 'Conservation Science' } ]
